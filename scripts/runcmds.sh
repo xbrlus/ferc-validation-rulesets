@@ -1,1 +1,7 @@
 python ~/arelle/Arelle-master/arellecmdline.py --plugins xule --xule-rule-set /Users/campbellpryde/Documents/GitHub/ferc-validation-rulesets/ValidationRuleset_Form1.zip -f /Users/campbellpryde/Documents/GitHub/ferc-xendr-rulesets/Form1/SampleInstances/Sample_Form_1.xbrl  -v --xule-time .005 --xule-debug --noCertificateCheck --logFile Sample-f1.xml  --xule-run-only 'FERC.F1.204.100'
+
+python ~/arelle/Arelle-master/arellecmdline.py --plugins xule --xule-rule-set /Users/campbellpryde/Documents/GitHub/ferc-validation-rulesets/ValidationRuleset_Form2.zip -f /Users/campbellpryde/Documents/GitHub/ferc-xendr-rulesets/Form2/SampleInstances/Sample_Form_2.xbrl  -v --xule-time .005 --xule-debug --noCertificateCheck --logFile Sample-f2.xml  --xule-run-only 'FERC.typedDim'
+
+python ~/arelle/Arelle-master/arellecmdline.py --plugins xule --xule-rule-set /Users/campbellpryde/Documents/GitHub/ferc-validation-rulesets/ValidationRuleset_Form6.zip -f /Users/campbellpryde/Documents/GitHub/ferc-xendr-rulesets/Form6/SampleInstances/Sample_Form_6.xbrl  -v --xule-time .005 --xule-debug --noCertificateCheck --logFile Sample-f6.xml  --xule-run-only 'FERC.typedDim'
+
+python ~/arelle/Arelle-master/arellecmdline.py --plugins xule --xule-rule-set /Users/campbellpryde/Documents/GitHub/ferc-validation-rulesets/ValidationRuleset_Form60.zip -f /Users/campbellpryde/Documents/GitHub/ferc-xendr-rulesets/Form60/SampleInstances/Sample_Form_60.xbrl  -v --xule-time .005 --xule-debug --noCertificateCheck --logFile Sample-f60.xml  --xule-run-only 'FERC.typedDim'
