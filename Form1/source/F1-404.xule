@@ -1,0 +1,134 @@
+/**FERC Form 1 Rules 
+**/
+
+
+RULE-NAME-PREFIX FERC
+
+assert F1.404.1 satisfied 
+$rule_id = rule-name();
+
+if set('1-F','1/3-Q').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@CostOfPlant}; 
+ $addend = ({@CostOfLandAndLandRightsRenewableProduction}#f404-1
+ + {@CostOfStructuresAndImprovementsRenewableProduction}#f404-2
+ + {@CostOfSolarPanelsWindTurbinesAndGeneratorsRenewableProduction}#f404-3
+ + {@CostOfFuelHoldersRenewableProduction}#f404-4
+ + {@CostOfBoilersRenewableProduction}#f404-5
+ + {@CostOfCollectorSystemRenewableProduction}#f404-6
+ + {@CostOfGeneratorStepupTransformersRenewableProduction}#f404-7
+ + {@CostOfInvertersRenewableProduction}#f404-8
+ + {@CostOfOtherAccessoryElectricalEquipmentRenewableProduction}#f404-9
+ + {@CostOfComputerHardwareRenewableProduction}#f404-10
+ + {@CostOfComputerSoftwareRenewableProduction}#f404-11
+ + {@CostOfCommunicationEquipmentRenewableProduction}#f404-10
+ + {@CostOfMiscellaneousPowerPlantEquipmentRenewableProduction}#f404-10
+ + {@AssetRetirementCostsRenewableProduction}#f404-11
+ );
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for CostOfPlant with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}.
+
+= \t {$f404-1.concept.name.local-name} \t = \t {$f404-1}
++ \t {$f404-2.concept.name.local-name} \t = \t {$f404-2}
++ \t {$f404-3.concept.name.local-name} \t = \t {$f404-3}
++ \t {$f404-4.concept.name.local-name} \t = \t {$f404-4}
++ \t {$f404-5.concept.name.local-name} \t = \t {$f404-5}
++ \t {$f404-6.concept.name.local-name} \t = \t {$f404-6}
++ \t {$f404-7.concept.name.local-name} \t = \t {$f404-7}
++ \t {$f404-8.concept.name.local-name} \t = \t {$f404-8}
++ \t {$f404-9.concept.name.local-name} \t = \t {$f404-9}
++ \t {$f404-10.concept.name.local-name} \t = \t {$f404-10}
++ \t {$f404-11.concept.name.local-name} \t = \t {$f404-11}
+
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Dimensions : {$sum1.dimensions.join(',','=')}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+assert F1.404.2 satisfied 
+$rule_id = rule-name();
+
+if set('1-F','1/3-Q').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+$sum1 = {@CostPerKilowattOfInstalledCapacity @@RenewablePlantNameAxis=* @unit=* @period = $currentDuration};
+
+$denominator = {@InstalledCapacityOfPlant @@RenewablePlantNameAxis=* @unit=* @period = $currentInstant}
+ if $denominator == 0
+        skip
+ else
+        $addend = ({@CostOfPlant @@RenewablePlantNameAxis=* @unit=* @period = $currentInstant} / ($denominator * 1000));
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for CostPerKilowattOfInstalledCapacity with a value of {$sum1} that is not equal to the value of its components of {$addend}
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+assert F1.404.3 satisfied 
+$rule_id = rule-name();
+
+if set('1-F','1/3-Q').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@PowerProductionExpensesRenewable @@RenewablePlantNameAxis=*}; 
+ $addend = ({@OperationSupervisionAndEngineeringExpense @@RenewablePlantNameAxis=*} 
+ + {@GenerationAndOtherPlantOperatingExpensesRenewableProduction @@RenewablePlantNameAxis=*} 
+ + {@FuelRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@SteamExpensesRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@ElectricExpensesRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@MiscellaneousSteamPowerExpensesRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@RentsRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@EnvironmentalCreditsRenewableGeneration @@RenewablePlantNameAxis=*}
+ 
+ + {@MaintenanceSupervisionAndEngineeringRenewableGeneration @@RenewablePlantNameAxis=*}
+ + {@MaintenanceOfStructuresAndEquipmentRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@MaintenanceOfBoilerPlantRenewableGeneration @@RenewablePlantNameAxis=*}
+ + {@MaintenanceOfElectricPlantRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@MaintenanceOfComputerHardwareRenewableGeneration @@RenewablePlantNameAxis=*}
+ + {@MaintenanceOfComputerSoftwareRenewableGeneration @@RenewablePlantNameAxis=*}
+ + {@MaintenanceOfCommunicationEquipmentRenewableGeneration @@RenewablePlantNameAxis=*} 
+ + {@MaintenanceOfMiscellaneousRenewablePlant @@RenewablePlantNameAxis=*});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for PowerProductionExpensesSteamPower with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+assert F1.404.4 satisfied 
+$rule_id = rule-name();
+
+if set('1-F','1/3-Q').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@ExpensesPerNetKilowattHour @unit=*}; 
+ $denominator = {@NetGenerationExcludingPlantUse @unit=*}
+ if $denominator == 0
+        skip
+ else
+        $addend = ({@PowerProductionExpensesSteamPower @unit=*} / $denominator);
+        tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for ExpensesPerNetKilowattHour with a value of {$sum1} that is not equal to the value of its components of {$addend}
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+
+

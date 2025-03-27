@@ -17,7 +17,8 @@ $AmortizationExpense = first-value({@AmortizationExpense}, sum(list({nonils @Amo
  + {@MaintenanceExpense}#f1 
  + {@DepreciationExpense}#f2 
  + {@DepreciationExpenseForAssetRetirementCosts}#f3 
- + $AmortizationExpense
+ + {@AmortizationExpense}#f4 
+
  + {@RegulatoryDebits}#f5 
  - {@RegulatoryCredits}#f6 
  + {@TaxesOtherThanIncomeTaxesUtilityOperatingIncome}#f7 
@@ -31,6 +32,8 @@ $AmortizationExpense = first-value({@AmortizationExpense}, sum(list({nonils @Amo
  - {@GainsFromDispositionOfAllowances}#f15 
  + {@LossesFromDispositionOfAllowances}#f16 
  + {@AccretionExpense}#f17
+ - {@GainsFromDispositionOfEnvironmentalCredits}#f18
+ + {@LossesFromDispositionOfEnvironmentalCredits}#f19
 ); 
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -39,7 +42,7 @@ message
 + \t {$f1.concept.name.local-name} \t = \t {$f1}
 + \t {$f2.concept.name.local-name} \t = \t {$f2}
 + \t {$f3.concept.name.local-name} \t = \t {$f3}
-+ \t AmortizationExpense \t = \t {$AmortizationExpense}
++ \t {$f4.concept.name.local-name} \t = \t {$f4}
 + \t {$f5.concept.name.local-name} \t = \t {$f5}
 - \t {$f6.concept.name.local-name} \t = \t {$f6}
 + \t {$f7.concept.name.local-name} \t = \t {$f7}
@@ -53,6 +56,8 @@ message
 - \t {$f15.concept.name.local-name} \t = \t {$f15}
 + \t {$f16.concept.name.local-name} \t = \t {$f16}
 + \t {$f17.concept.name.local-name} \t = \t {$f17}
+- \t {$f18.concept.name.local-name} \t = \t {$f18}
++ \t {$f19.concept.name.local-name} \t = \t {$f19}
 
 Total Element : {$sum1.concept.name}
 Total Period : {$sum1.period}

@@ -33,6 +33,8 @@ else
  - {@GainsFromDispositionOfAllowances}#f18
  + {@LossesFromDispositionOfAllowances}#f19
  + {@AccretionExpense}#f20
+ - {@GainsFromDispositionOfEnvironmentalCredits}#f21
+ + {@LossesFromDispositionOfEnvironmentalCredits}#f22
 ); 
 
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
@@ -59,6 +61,8 @@ message
 - \t {$f18.concept.name.local-name} \t = \t {$f18}
 + \t {$f19.concept.name.local-name} \t = \t {$f19}
 + \t {$f20.concept.name.local-name} \t = \t {$f20}
+- \t {$f21.concept.name.local-name} \t = \t {$f21}
++ \t {$f22.concept.name.local-name} \t = \t {$f22}
 
 Total Element : {$sum1.concept.name}
 Total Period : {$sum1.period}

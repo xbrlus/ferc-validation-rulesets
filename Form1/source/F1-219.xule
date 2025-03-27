@@ -106,11 +106,15 @@ else
  $addend = ({@AccumulatedDepreciationSteamProduction} 
  + {@AccumulatedDepreciationNuclearProduction} 
  + {@AccumulatedDepreciationHydraulicProductionConventional} 
- + {@AccumulatedDepreciationHydraulicProductionPumpedStorage} 
+ + {@AccumulatedDepreciationHydraulicProductionPumpedStorage}
+ + {@AccumulatedDepreciationSolarProduction}
+ + {@AccumulatedDepreciationWindProduction}
+ + {@AccumulatedDepreciationOtherRenewableProduction} 
  + {@AccumulatedDepreciationOtherProduction} 
  + {@AccumulatedDepreciationTransmission} 
  + {@AccumulatedDepreciationDistribution} 
- + {@AccumulatedDepreciationRegionalTransmissionAndMarketOperation} 
+ + {@AccumulatedDepreciationRegionalTransmissionAndMarketOperation}
+ + {@AccumulatedDepreciationEnergyStorage} 
  + {@AccumulatedDepreciationGeneral});
 
 tolerance_for_decimals($sum219-4,$addend,$tolerance_factor)  

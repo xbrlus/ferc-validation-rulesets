@@ -16,11 +16,15 @@ else
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=NuclearProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantConventionalMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantPumpedStorageMember @period=$currentDuration}
+ + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=SolarProductionPlantMember @period=$currentDuration}
+ + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=WindProductionPlantMember @period=$currentDuration}
+ + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherRenewableProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=TransmissionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=DistributionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=RegionalTransmissionAndMarketOperationMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=GeneralPlantMember @period=$currentDuration}
+ + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=EnergyStoragePlantMember @period=$currentDuration}
  + {@DepreciationExpenseExcludingAmortizationOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=CommonPlantElectricMember @period=$currentDuration});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -42,11 +46,15 @@ else
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=NuclearProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantConventionalMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantPumpedStorageMember @period=$currentDuration}
+  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=SolarProductionPlantMember @period=$currentDuration}
+ + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=WindProductionPlantMember @period=$currentDuration}
+ + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherRenewableProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherProductionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=TransmissionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=DistributionPlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=RegionalTransmissionAndMarketOperationMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=GeneralPlantMember @period=$currentDuration}
+  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=EnergyStoragePlantMember @period=$currentDuration}
  + {@DepreciationExpenseForAssetRetirementCostsExcludingAmortizationgOfAcquisitionAdjustments @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=CommonPlantElectricMember @period=$currentDuration});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -68,10 +76,14 @@ else
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=NuclearProductionPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantConventionalMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantPumpedStorageMember @period=$currentDuration}
+ + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=SolarProductionPlantMember @period=$currentDuration}
+ + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=WindProductionPlantMember @period=$currentDuration}
+ + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherRenewableProductionPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherProductionPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=TransmissionPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=DistributionPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=RegionalTransmissionAndMarketOperationMember @period=$currentDuration}
+ + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=EnergyStoragePlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=GeneralPlantMember @period=$currentDuration}
  + {@AmortizationOfLimitedTermPlantOrProperty @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=CommonPlantElectricMember @period=$currentDuration});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
@@ -94,10 +106,14 @@ else
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=NuclearProductionPlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantConventionalMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantPumpedStorageMember @period=$currentDuration}
+ + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=SolarProductionPlantMember @period=$currentDuration}
+ + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=WindProductionPlantMember @period=$currentDuration}
+ + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherRenewableProductionPlantMember @period=$currentDuration} 
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherProductionPlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=TransmissionPlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=DistributionPlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=RegionalTransmissionAndMarketOperationMember @period=$currentDuration}
+ + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=EnergyStoragePlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=GeneralPlantMember @period=$currentDuration}
  + {@AmortizationOfOtherElectricPlant @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=CommonPlantElectricMember @period=$currentDuration});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
@@ -120,10 +136,14 @@ else
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=NuclearProductionPlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantConventionalMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=HydraulicProductionPlantPumpedStorageMember @period=$currentDuration}
+ + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=SolarProductionPlantMember @period=$currentDuration} 
+ + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=WindProductionPlantMember @period=$currentDuration} 
+ + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherRenewableProductionPlantMember @period=$currentDuration} 
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=OtherProductionPlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=TransmissionPlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=DistributionPlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=RegionalTransmissionAndMarketOperationMember @period=$currentDuration}
+ + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=EnergyStoragePlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=GeneralPlantMember @period=$currentDuration}
  + {@DepreciationAndAmortization @UtilityTypeAxis=ElectricUtilityMember @FunctionalClassificationAxis=CommonPlantElectricMember @period=$currentDuration});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  

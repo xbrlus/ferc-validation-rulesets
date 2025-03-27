@@ -15,7 +15,8 @@ else
  + {@PlantMaterialsAndOperatingSuppliesProductionPlant} 
  + {@PlantMaterialsAndOperatingSuppliesTransmissionPlant} 
  + {@PlantMaterialsAndOperatingSuppliesDistributionPlant} 
- + {@PlantMaterialsAndOperatingSuppliesRegionalTransmissionAndMarketOperationPlant} 
+ + {@PlantMaterialsAndOperatingSuppliesRegionalTransmissionAndMarketOperationPlant}
+ + {@PlantMaterialsAndOperatingSuppliesEnergyStoragePlant}
  + {@PlantMaterialsAndOperatingSuppliesOther});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 

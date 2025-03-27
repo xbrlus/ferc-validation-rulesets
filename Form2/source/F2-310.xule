@@ -184,7 +184,7 @@ else
  + {@GasWithdrawnFromStorageDebt}
  - {@GasDeliveredToStorageCredit}
  + {@WithdrawalsOfLiquefiedNaturalGasHeldForProcessingDebit}
- + {@DeliveriesOfNaturalGasForProcessingCredit}
+ - {@DeliveriesOfNaturalGasForProcessingCredit}
  + {@OtherGasSupplyExpenses}
  - {@GasUsedInUtilityOperationCredit}
  );
