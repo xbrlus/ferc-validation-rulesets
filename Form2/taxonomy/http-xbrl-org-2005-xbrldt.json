@@ -1,0 +1,20 @@
+{
+    "http://xbrl.org/2005/xbrldt": [
+        {
+            "dataType": "xbrli:stringItemType",
+            "periodType": "duration",
+            "localName": "dimensionItem",
+            "label": "xbrldt:dimensionItem",
+            "type": "Concept",
+            "isAbstract": "true"
+        },
+        {
+            "dataType": "xbrli:stringItemType",
+            "periodType": "duration",
+            "localName": "hypercubeItem",
+            "label": "xbrldt:hypercubeItem",
+            "type": "Concept",
+            "isAbstract": "true"
+        }
+    ]
+}

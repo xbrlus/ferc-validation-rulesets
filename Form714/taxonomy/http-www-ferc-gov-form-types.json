@@ -1,0 +1,69 @@
+{
+    "http://www.ferc.gov/form/types": [
+        {
+            "type": "Type",
+            "localName": "statesOfUnitedStatesItemType",
+            "label": "statesOfUnitedStatesItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "ShareholdersReportSubmittedItemType",
+            "label": "ShareholdersReportSubmittedItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "fileItemType",
+            "label": "fileItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "MajorNonmajorType",
+            "label": "MajorNonmajorType"
+        },
+        {
+            "type": "Type",
+            "localName": "formItemType",
+            "label": "formItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "scheduleItemType",
+            "label": "scheduleItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "formTypeItemType",
+            "label": "formTypeItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "compressorItemType",
+            "label": "compressorItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "investmentClassItemType",
+            "label": "investmentClassItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "reportPeriodItemType",
+            "label": "reportPeriodItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "submissionItemType",
+            "label": "submissionItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "taxTypeItemType",
+            "label": "taxTypeItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "operationItemType",
+            "label": "operationItemType"
+        }
+    ]
+}

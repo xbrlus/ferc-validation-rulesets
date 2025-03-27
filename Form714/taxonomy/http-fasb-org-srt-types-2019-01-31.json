@@ -1,0 +1,14 @@
+{
+    "http://fasb.org/srt-types/2019-01-31": [
+        {
+            "type": "Type",
+            "localName": "perUnitItemType",
+            "label": "perUnitItemType"
+        },
+        {
+            "type": "Type",
+            "localName": "extensibleListItemType",
+            "label": "extensibleListItemType"
+        }
+    ]
+}

@@ -1,0 +1,964 @@
+{
+    "http://ferc.gov/form/2025-01-01/ferc": [
+        {
+            "localName": "IdentificationTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Identification [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "DisclosureOfHowRespondentCalculatesSystemLambdaTextBlock",
+            "dataType": "nonnum:textBlockItemType",
+            "label": "Disclosure of How Respondent Calculates System Lambda [Text Block]",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "TitleOfCertifyingOfficial",
+            "dataType": "xbrli:stringItemType",
+            "label": "Title of Certifying Official",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NameOfContactPerson",
+            "dataType": "xbrli:stringItemType",
+            "label": "Name of Contact Person",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "OrderNumber",
+            "dataType": "xbrli:decimalItemType",
+            "label": "Order Number",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AprilMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "April [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleBalancingAuthorityAreaMonthlyCapabilitiesAtTimeOfMonthlyPeakDemandAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Balancing Authority Area Monthly Capabilities at Time of Monthly Peak Demand [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "CertifyingOfficialDate",
+            "dataType": "xbrli:dateItemType",
+            "label": "Certifying Official, Date",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "FormType",
+            "dataType": "ferc-types:formTypeItemType",
+            "label": "Form Type",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ExternalToTheBalancingAuthorityAreaNetUnitOrFirmCapabilityNotAvailable",
+            "dataType": "num:powerItemType",
+            "label": "External to the Balancing Authority Area Net Unit or Firm Capability, Not Available",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaInterconnectionLineOrBusNames",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Interconnection Line or Bus Names",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "Form714Abstract",
+            "dataType": "ferc-types:formItemType",
+            "label": "Form 714 [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "DefaultTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Default [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetEnergyForLoadAndPeakDemandSourcesByMonthNetEnergyForLoad",
+            "dataType": "num:energyItemType",
+            "label": "Net Energy for Load and Peak Demand Sources by Month, Net Energy for Load",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleIdentificationAndCertificationAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Identification and Certification [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AdjacentBalancingAuthorityAreaInterconnectionsTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Adjacent Balancing Authority Area Interconnections [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "TitleOfContactPerson",
+            "dataType": "xbrli:stringItemType",
+            "label": "Title of Contact Person",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilityCoincidentPeakDemandWinter",
+            "dataType": "num:powerItemType",
+            "label": "Electric Utility Coincident Peak Demand, Winter",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "MigratedData",
+            "dataType": "xbrli:booleanItemType",
+            "label": "Migrated Data",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastWinterForecast",
+            "dataType": "num:powerItemType",
+            "label": "Planning Area Hourly Demand and Forecast, Winter Forecast",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleBalancingAuthorityAreaScheduledAndActualInterchangeAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Balancing Authority Area Scheduled and Actual Interchange [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaNetEnergyForLoadAndPeakDemandSourcesByMonthLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Net Energy for Load and Peak Demand Sources by Month [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "UnavailableCapabilityDueToOtherOutageAndDerating",
+            "dataType": "num:powerItemType",
+            "label": "Unavailable Capability Due To, Other Outage and Derating",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "DefaultAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Default [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "UnavailableCapabilityDueToPlannedOutageAndDerating",
+            "dataType": "num:powerItemType",
+            "label": "Unavailable Capability Due To, Planned Outage and Derating",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "MonthDomain",
+            "dataType": "nonnum:domainItemType",
+            "label": "Month [Domain]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaFlag",
+            "dataType": "xbrli:booleanItemType",
+            "label": "Planning Area Flag",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NameOfCertifyingOfficial",
+            "dataType": "xbrli:stringItemType",
+            "label": "Name of Certifying Official",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AdjacentBalancingAuthorityAreaInterconnectionsAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Adjacent Balancing Authority Area Interconnections [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "JanuaryMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "January [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "GeneratingPlantsIncludedInReportingBalancingAuthorityAreaAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Generating Plants Included in Reporting Balancing Authority Area [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilityCoincidentPeakDemandSummer",
+            "dataType": "num:powerItemType",
+            "label": "Electric Utility Coincident Peak Demand, Summer",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaMonthlyCapabilitiesAtTimeOfMonthlyPeakDemandTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Monthly Capabilities at Time of Monthly Peak Demand [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaScheduledAndActualInterchangeAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Scheduled and Actual Interchange [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastSummerAndWinterPeakDemandAndAnnualNetEnergyForLoadLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Planning Area Hourly Demand and Forecast Summer and Winter Peak Demand and Annual Net Energy for Load [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RevisedFilingExplanation",
+            "dataType": "xbrli:stringItemType",
+            "label": "Revised Filing Explanation",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetEnergyForLoadAndPeakDemandSourcesByMonthBalancingAuthorityAreaNetGeneration",
+            "dataType": "num:energyItemType",
+            "label": "Net Energy for Load and Peak Demand Sources by Month, Balancing Authority Area Net Generation",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduledInterchangeBetweenBalancingAuthorityAreasDelivered",
+            "dataType": "num:energyItemType",
+            "label": "Scheduled Interchange Between Balancing Authority Areas, Delivered",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "CertifyingOfficialAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Certifying Official [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaFlag",
+            "dataType": "xbrli:booleanItemType",
+            "label": "Balancing Authority Area Flag",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastSummerForecast",
+            "dataType": "num:powerItemType",
+            "label": "Planning Area Hourly Demand and Forecast, Summer Forecast",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "SchedulePlanningAreaHourlyDemandAndForecastSummerAndWinterPeakDemandAndAnnualNetEnergyForLoadBAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Planning Area Hourly Demand and Forecast Summer and Winter Peak Demand and Annual Net Energy for Load B [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "EmailOfContactPerson",
+            "dataType": "xbrli:stringItemType",
+            "label": "Email of Contact Person",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaName",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Name",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "FebruaryMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "February [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RespondentTypeAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Respondent Type [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "OctoberMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "October [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetCapabilityAtTheTimeOfTheMonthlyPeakDemandBasedOnBalancingAuthorityAreaAreaNetEnergyForLoadAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Net Capability at the Time of the Monthly Peak Demand, Based on Balancing Authority Area Area Net Energy for Load [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ActualInterchangeBetweenAdjacentBalancingAuthorityAreasDelivered",
+            "dataType": "num:energyItemType",
+            "label": "Actual Interchange Between Adjacent Balancing Authority Areas, Delivered",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "IntegratedNetLoadOnThePlantAtTheHourOfTheAnnualPeakDemandBasedOnNetEnergyForLoad",
+            "dataType": "num:powerItemType",
+            "label": "Integrated Net Load on the Plant at the Hour of the Annual Peak Demand Based on Net Energy for Load",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ActualInterchangeBetweenAdjacentBalancingAuthorityAreasReceived",
+            "dataType": "num:energyItemType",
+            "label": "Actual Interchange Between Adjacent Balancing Authority Areas, Received",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleBalancingAuthorityAreaNetEnergyForLoadAndPeakDemandSourcesByMonthAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Balancing Authority Area Net Energy for Load and Peak Demand Sources by Month [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduledInterchangeBetweenBalancingAuthorityAreasReceived",
+            "dataType": "num:energyItemType",
+            "label": "Scheduled Interchange Between Balancing Authority Areas, Received",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ExternalToTheBalancingAuthorityAreaNetUnitOrFirmCapabilityAvailable",
+            "dataType": "num:powerItemType",
+            "label": "External to the Balancing Authority Area Net Unit or Firm Capability, Available",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleElectricUtilitiesThatComposeThePlanningAreaAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Electric Utilities That Compose the Planning Area [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastSummerAndWinterPeakDemandAndAnnualNetEnergyForLoadAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Planning Area Hourly Demand and Forecast Summer and Winter Peak Demand and Annual Net Energy for Load [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AdjacentBalancingAuthorityAreaInterconnectionsAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Adjacent Balancing Authority Area Interconnections [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AdjacentBalancingAuthorityAreaInterconnectionsLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Adjacent Balancing Authority Area Interconnections [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "SeptemberMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "September [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LoadSourcesAtTimeOfBalancingAuthorityAreaMonthlyPeakDemandUnitOrFirmPurchases",
+            "dataType": "num:powerItemType",
+            "label": "Load Sources at Time of Balancing Authority Area Monthly Peak Demand, Unit or Firm Purchases",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LoadSourcesAtTimeOfBalancingAuthorityAreaMonthlyPeakDemandUnitOrFirmSales",
+            "dataType": "num:powerItemType",
+            "label": "Load Sources at Time of Balancing Authority Area Monthly Peak Demand, Unit or Firm Sales",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ReportYear",
+            "dataType": "xbrli:integerItemType",
+            "label": "Report Year",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LegalEntityIdentifier",
+            "dataType": "xbrli:stringItemType",
+            "label": "Legal Entity Identifier",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "JuneMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "June [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "DefaultLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Default [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RespondentLegalName",
+            "dataType": "xbrli:stringItemType",
+            "label": "Respondent Legal Name",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlantAvailableCapacityAtTheHourOfTheAnnualPeakDemandOnNetEnergyForLoad",
+            "dataType": "num:powerItemType",
+            "label": "Plant Available Capacity at the Hour of the Annual Peak Demand on Net Energy for Load",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LoadSourcesAtTimeOfBalancingAuthorityAreaMonthlyPeakDemandNetNonFirmAndInadvertent",
+            "dataType": "num:powerItemType",
+            "label": "Load Sources at Time of Balancing Authority Area Monthly Peak Demand, Net Non Firm and Inadvertent",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "IdentificationLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Identification [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaScheduledAndActualInterchangeLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Scheduled and Actual Interchange [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RespondentMailingAddress",
+            "dataType": "xbrli:stringItemType",
+            "label": "Respondent Mailing Address",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilityName",
+            "dataType": "xbrli:stringItemType",
+            "label": "Electric Utility Name",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "GeneratingPlantsIncludedInReportingBalancingAuthorityAreaTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Generating Plants Included in Reporting Balancing Authority Area [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "SystemLambda",
+            "dataType": "xbrli:pureItemType",
+            "label": "System Lambda",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "instant"
+        },
+        {
+            "localName": "NovemberMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "November [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "SubmissionType",
+            "dataType": "ferc-types:submissionItemType",
+            "label": "Original Submission or Resubmission",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "SchedulePlanningAreaHourlyDemandAndForecastSummerAndWinterPeakDemandAndAnnualNetEnergyForLoadAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Planning Area Hourly Demand and Forecast Summer and Winter Peak Demand and Annual Net Energy for Load A [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "DecemberMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "December [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "MarchMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "March [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LoadSourcesAtTimeOfBalancingAuthorityAreaMonthlyPeakDemandMonthlyPeakDemand",
+            "dataType": "num:powerItemType",
+            "label": "Load Sources at Time of Balancing Authority Area Monthly Peak Demand, Monthly Peak Demand",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlantsAvailableCapability",
+            "dataType": "num:powerItemType",
+            "label": "Plants Available Capability",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "CompanyIdentifier",
+            "dataType": "xbrli:stringItemType",
+            "label": "Company Identifier",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastYear",
+            "dataType": "xbrli:stringItemType",
+            "label": "Planning Area Hourly Demand and Forecast, Year",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "AugustMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "August [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "MayMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "May [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaNetEnergyForLoadAndPeakDemandSourcesByMonthTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Net Energy for Load and Peak Demand Sources by Month [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NameOfAdjacentBalancingAuthorityArea",
+            "dataType": "xbrli:stringItemType",
+            "label": "Name of Adjacent Balancing Authority Area",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleBalancingAuthorityAreaSystemLambdaDataAndDescriptionOfEconomicDispatchAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Balancing Authority Area System Lambda Data and Description of Economic Dispatch [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "MonthAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Month [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ContactPersonAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Contact Person [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaScheduledAndActualInterchangeTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Scheduled and Actual Interchange [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ReportPeriod",
+            "dataType": "ferc-types:reportPeriodItemType",
+            "label": "Report Period",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaName",
+            "dataType": "xbrli:stringItemType",
+            "label": "Planning Area Name",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "UnavailableCapabilityDueToUnplannedOutageAndDerating",
+            "dataType": "num:powerItemType",
+            "label": "Unavailable Capability Due To, Unplanned Outage and Derating",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RespondentIdentificationCode",
+            "dataType": "xbrli:stringItemType",
+            "label": "Respondent Identification, Code",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "TimeZone",
+            "dataType": "xbrli:stringItemType",
+            "label": "Time Zone",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ReportYearPeriod",
+            "dataType": "xbrli:stringItemType",
+            "label": "Report Year Period",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LoadSourcesAtTimeOfBalancingAuthorityAreaMonthlyPeakDemandOutputOfGeneratingPlants",
+            "dataType": "num:powerItemType",
+            "label": "Load Sources at Time of Balancing Authority Area Monthly Peak Demand, Output of Generating Plants",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetEnergyForLoadAndPeakDemandSourcesByMonthNetActualInterchange",
+            "dataType": "num:energyItemType",
+            "label": "Net Energy for Load and Peak Demand Sources by Month, Net Actual Interchange",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "JulyMember",
+            "dataType": "nonnum:domainItemType",
+            "label": "July [Member]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ScheduleGeneratingPlantsIncludedInReportingBalancingAuthorityAreaAbstract",
+            "dataType": "ferc-types:scheduleItemType",
+            "label": "Schedule Generating Plants Included in Reporting Balancing Authority Area [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "TelephoneOfContactPerson",
+            "dataType": "xbrli:stringItemType",
+            "label": "Telephone of Contact Person, Including Area Code",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilitiesThatComposeThePlanningAreaLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Electric Utilities That Compose the Planning Area [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PhoneExtensionOfContactPerson",
+            "dataType": "xbrli:stringItemType",
+            "label": "Phone Extension of Contact Person",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetEnergyForLoadAndPeakDemandSourcesByMonthMonthlyMinimumDemand",
+            "dataType": "num:powerItemType",
+            "label": "Net Energy for Load and Peak Demand Sources by Month, Monthly Minimum Demand",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "LineOrBusVoltage",
+            "dataType": "num-us:voltageItemType",
+            "label": "Line or Bus Voltage",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetCapabilityFromPlantsReportedOnScheduleIiAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Net Capability from Plants Reported on Schedule Ii [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilitiesThatComposeThePlanningAreaAxis",
+            "dataType": "xbrli:stringItemType",
+            "label": "Electric Utilities That Compose the Planning Area [Axis]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastSummerAndWinterPeakDemandAndAnnualNetEnergyForLoadTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Planning Area Hourly Demand and Forecast Summer and Winter Peak Demand and Annual Net Energy for Load [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "ElectricUtilitiesThatComposeThePlanningAreaTable",
+            "dataType": "xbrli:stringItemType",
+            "label": "Electric Utilities That Compose the Planning Area [Table]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "BalancingAuthorityAreaMonthlyCapabilitiesAtTimeOfMonthlyPeakDemandLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Balancing Authority Area Monthly Capabilities at Time of Monthly Peak Demand [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetCapabilityAtTheTimeOfTheMonthlyPeakDemand",
+            "dataType": "num:powerItemType",
+            "label": "Net Capability at the Time of the Monthly Peak Demand",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NetCapabilityFromPlants",
+            "dataType": "num:powerItemType",
+            "label": "Net Capability from Plants",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandAndForecastForecastOfAnnualNetEnergyForLoad",
+            "dataType": "num:energyItemType",
+            "label": "Planning Area Hourly Demand and Forecast, Forecast of Annual Net Energy for Load",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "NameOfBalancingAuthorityArea",
+            "dataType": "xbrli:stringItemType",
+            "label": "Name of Balancing Authority Area",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "PlanningAreaHourlyDemandMegawatts",
+            "dataType": "num:powerItemType",
+            "label": "Planning Area Hourly Demand in Megawatts",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "instant"
+        },
+        {
+            "localName": "PlantName",
+            "dataType": "xbrli:stringItemType",
+            "label": "Plant Name",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "RespondentIdentificationAbstract",
+            "dataType": "xbrli:stringItemType",
+            "label": "Respondent Identification [Abstract]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        },
+        {
+            "localName": "UnitDispatchNotBasedOnEconomicDispatchOfThermalUnits",
+            "dataType": "xbrli:booleanItemType",
+            "label": "Unit Dispatch Not Based on Economic Dispatch of Thermal Units",
+            "type": "Concept",
+            "isAbstract": "false",
+            "periodType": "duration"
+        },
+        {
+            "localName": "GeneratingPlantsIncludedInReportingBalancingAuthorityAreaLineItems",
+            "dataType": "xbrli:stringItemType",
+            "label": "Generating Plants Included in Reporting Balancing Authority Area [Line Items]",
+            "type": "Concept",
+            "isAbstract": "true",
+            "periodType": "duration"
+        }
+    ]
+}

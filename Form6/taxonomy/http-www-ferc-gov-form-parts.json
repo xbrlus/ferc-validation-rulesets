@@ -1,0 +1,200 @@
+{
+    "http://www.ferc.gov/form/parts": [
+        {
+            "type": "Reference",
+            "localName": "RowStart",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "RowStart"
+        },
+        {
+            "type": "Reference",
+            "localName": "Account",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Account"
+        },
+        {
+            "type": "Reference",
+            "localName": "MemberValue",
+            "dataType": "string",
+            "isAbstract": "false",
+            "label": "MemberValue"
+        },
+        {
+            "type": "Reference",
+            "localName": "SequenceDimension",
+            "dataType": "anyURI",
+            "isAbstract": "false",
+            "label": "SequenceDimension"
+        },
+        {
+            "type": "Reference",
+            "localName": "Dimension",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Dimension"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleSeverity",
+            "dataType": "ferc-part:RuleSeverity@anonymousType",
+            "isAbstract": "false",
+            "label": "RuleSeverity"
+        },
+        {
+            "type": "Reference",
+            "localName": "FixedMember",
+            "dataType": "string",
+            "isAbstract": "false",
+            "label": "FixedMember"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleDescription",
+            "dataType": "string",
+            "isAbstract": "false",
+            "label": "RuleDescription"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleFocus",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "RuleFocus"
+        },
+        {
+            "type": "Reference",
+            "localName": "Sign",
+            "dataType": "ferc-part:Sign@anonymousType",
+            "isAbstract": "false",
+            "label": "Sign"
+        },
+        {
+            "type": "Reference",
+            "localName": "ValueType",
+            "dataType": "ferc-part:ValueType@anonymousType",
+            "isAbstract": "false",
+            "label": "ValueType"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleLogic",
+            "dataType": "string",
+            "isAbstract": "false",
+            "label": "RuleLogic"
+        },
+        {
+            "type": "Reference",
+            "localName": "Form",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Form"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleCondition",
+            "dataType": "ferc-part:RuleCondition@anonymousType",
+            "isAbstract": "false",
+            "label": "RuleCondition"
+        },
+        {
+            "type": "Reference",
+            "localName": "ScheduleRole",
+            "dataType": "anyURI",
+            "isAbstract": "false",
+            "label": "ScheduleRole"
+        },
+        {
+            "type": "Reference",
+            "localName": "ColumnName",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "ColumnName"
+        },
+        {
+            "type": "Reference",
+            "localName": "DoNotConvert",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "DoNotConvert"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleIdentifier",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "RuleIdentifier"
+        },
+        {
+            "type": "Reference",
+            "localName": "RuleMessage",
+            "dataType": "string",
+            "isAbstract": "false",
+            "label": "RuleMessage"
+        },
+        {
+            "type": "Reference",
+            "localName": "RowEnd",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "RowEnd"
+        },
+        {
+            "type": "Reference",
+            "localName": "Column",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Column"
+        },
+        {
+            "type": "Reference",
+            "localName": "Row",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Row"
+        },
+        {
+            "type": "Reference",
+            "localName": "ElementName",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "ElementName"
+        },
+        {
+            "type": "Reference",
+            "localName": "SequenceRole",
+            "dataType": "anyURI",
+            "isAbstract": "false",
+            "label": "SequenceRole"
+        },
+        {
+            "type": "Reference",
+            "localName": "SupplementDimension",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "SupplementDimension"
+        },
+        {
+            "type": "Reference",
+            "localName": "Schedule",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "Schedule"
+        },
+        {
+            "type": "Reference",
+            "localName": "Period",
+            "dataType": "ferc-part:Period@anonymousType",
+            "isAbstract": "false",
+            "label": "Period"
+        },
+        {
+            "type": "Reference",
+            "localName": "MigrateOnly",
+            "dataType": "token",
+            "isAbstract": "false",
+            "label": "MigrateOnly"
+        }
+    ]
+}
