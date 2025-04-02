@@ -15,11 +15,15 @@ else
  + {@SteamProductionPlant} 
  + {@NuclearProductionPlant} 
  + {@HydraulicProductionConventionalPlant} 
- + {@HydraulicProductionPumpedStoragePlant} 
+ + {@HydraulicProductionPumpedStoragePlant}
+ + {@SolarProductionPlant}
+ + {@WindProductionPlant}
+ + {@OtherRenewableProductionPlant}
  + {@OtherProductionPlant} 
  + {@TransmissionPlant} 
  + {@DistributionPlant} 
- + {@TransmissionAndMarketOperationPlantRegionalTransmissionAndMarketOperationPlant} 
+ + {@TransmissionAndMarketOperationPlantRegionalTransmissionAndMarketOperationPlant}
+ + {@EnergyStoragePlant}
  + {@GeneralPlantExcludingOtherTangiblePropertyAndAssetRetirementCostsForGeneralPlant});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -44,11 +48,15 @@ else
  + {@AccumulatedDepreciationSteamProduction} 
  + {@AccumulatedDepreciationNuclearProduction} 
  + {@AccumulatedDepreciationHydraulicProductionConventional} 
- + {@AccumulatedDepreciationHydraulicProductionPumpedStorage} 
+ + {@AccumulatedDepreciationHydraulicProductionPumpedStorage}
+ + {@AccumulatedDepreciationSolarProductionPlant}
+ + {@AccumulatedDepreciationWindProductionPlant}
+ + {@AccumulatedDepreciationOtherRenewableProductionPlant}
  + {@AccumulatedDepreciationOtherProduction} 
  + {@AccumulatedDepreciationTransmission} 
  + {@AccumulatedDepreciationDistribution} 
- + {@AccumulatedDepreciationRegionalTransmissionAndMarketOperation} 
+ + {@AccumulatedDepreciationRegionalTransmissionAndMarketOperation}
+ + {@AccumulatedDepreciationEnergyStorage}
  + {@AccumulatedDepreciationGeneral});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 

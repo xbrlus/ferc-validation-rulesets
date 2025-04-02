@@ -97,6 +97,8 @@ else
  $sum1 = {@OtherPowerSupplyExpense}; 
  $addend = ({@PurchasedPower} 
  + {@PowerPurchasedForStorageOperations}
+ + {@BundledEnvironmentalCredits}
+ + {@UnbundledEnvironmentalCredits}
  + {@SystemControlAndLoadDispatchingElectric}
  + {@OtherExpensesOtherPowerSupplyExpenses});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
@@ -121,6 +123,9 @@ else
  $addend = ({@PowerProductionExpensesSteamPower} 
  + {@PowerProductionExpensesNuclearPower}
  + {@PowerProductionExpensesHydraulicPower}
+ + {@PowerProductionExpensesSolarPower}
+ + {@PowerProductionExpensesWindPower}
+ + {@PowerProductionExpensesOtherRenewable}
  + {@MaintenanceOfMiscellaneousOtherPowerGenerationPlant}
  + {@OtherPowerSupplyExpense});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
@@ -306,6 +311,94 @@ else
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
 "The company has reported a value for DistributionExpenses with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1Q.324.14 satisfied 
+$rule_id = rule-name();
+
+if set('1','1-F').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@PowerProductionExpensesSolarPower};
+ $addend = ({@SolarPowerGenerationOperationsExpense} 
+ + {@SolarPowerGenerationMaintenanceExpense});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for PowerProductionExpensesSolarPower with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1Q.324.15 satisfied 
+$rule_id = rule-name();
+
+if set('1','1-F').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@PowerProductionExpensesWindPower};
+ $addend = ({@WindPowerGenerationOperationsExpense} 
+ + {@WindPowerGenerationMaintenanceExpense});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for PowerProductionExpensesWindPower with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1Q.324.16 satisfied 
+$rule_id = rule-name();
+
+if set('1','1-F').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@PowerProductionExpensesOtherRenewable};
+ $addend = ({@OtherRenewableGenerationOperationsExpense} 
+ + {@OtherRenewableGenerationMaintenanceExpense});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for PowerProductionExpensesOtherRenewable with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1Q.324.17 satisfied 
+$rule_id = rule-name();
+
+if set('1','1-F').contains([covered @concept.local-name ='FormType'])
+        skip
+else
+ $sum1 = {@EnergyStorageExpenses};
+ $addend = ({@EnergyStorageOperationExpenses}
+ + {@EnergyStorageMaintenanceExpenses});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for EnergyStorageExpenses with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
 
 Total Element : {$sum1.concept.name}
 Total Period : {$sum1.period}

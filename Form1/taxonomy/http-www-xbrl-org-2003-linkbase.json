@@ -1,0 +1,11 @@
+{
+    "http://www.xbrl.org/2003/linkbase": [
+        {
+            "label": "part",
+            "dataType": "anySimpleType",
+            "isAbstract": "true",
+            "localName": "part",
+            "type": "Reference"
+        }
+    ]
+}

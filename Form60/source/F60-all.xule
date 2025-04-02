@@ -260,3 +260,35 @@ Rule Id:{$rule_id}"
 
 severity error	
 rule-focus $fact1
+
+assert F60.all.12 satisfied 
+$rule_id = rule-name();
+
+$dimensions = set(ferc:OtherInvestmentsAxis, ferc:ScheduleRemarksAxis, ferc:StoresExpenseUndistributedAxis, ferc:MiscellaneousGeneralExpensesAxis, ferc:OtherSpecialFundsAxis, ferc:TemporaryCashInvestmentsAxis, ferc:MiscellaneousCurrentAndAccruedLiabilitiesAxis, ferc:AnalysisOfBillingAssociateCompaniesAxis, ferc:DividendsAxis, ferc:AnalysisOfBillingNonAssociateCompaniesAxis, ferc:AccountsReceivableFromAssociateCompaniesAxis, ferc:ResearchDevelopmentOrDemonstrationExpendituresAxis, ferc:OtherLongTermDebtAxis, ferc:ConstructionWorkInProgressAxis, ferc:AdvancesFromAssociateCompaniesAxis, ferc:FuelStockExpensesUndistributedAxis, ferc:MiscellaneousCurrentAndAccruedAssetsAxis, ferc:MiscellaneousDeferredDebitsAxis, ferc:NotesPayableToAssociateCompaniesAxis, ferc:AccountsPayableToAssociateCompaniesAxis)
+
+$charLength = 250
+
+for $dim in $dimensions
+    $value = list({covered @concept = *  @$dim = *  where $fact.dimensions-typed.values.length > 0})
+    $set_with_lists_of_members = $value.dimensions-typed.values.to-set
+    $list_of_typed_members = sum($set_with_lists_of_members)
+    if $list_of_typed_members == none
+        skip
+    else 
+        $LongValues = (filter $list_of_typed_members where $item.string.length > $charLength returns $item)
+
+        if $LongValues == list()
+            skip
+        else
+            true
+
+message
+"The length of the typed dimension members {$LongValues.join(" | ")} is longer than {$charLength} characters on the typed dimension {$dim}. Typed dimension members should be a standard identifier that is consistent from year to year and should not be auto generated based on data in the filing.  Please rename the typed dimension identifier to a consistent unchanging identifier with a length that is no longer than {$charLength} characters.
+
+Typed Dimension : {$dim}
+Members : {$LongValues.join(" | ")}
+
+Rule Id:{$rule_id}"
+
+severity error  
+rule-focus taxonomy().concept($dim)

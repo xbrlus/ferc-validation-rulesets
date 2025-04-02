@@ -14,7 +14,10 @@ else
  $addend = ({@SteamGeneration} 
  + {@NuclearGeneration} 
  + {@HydroConventionalGeneration} 
- + {@HydroPumpedStorageGeneration} 
+ + {@HydroPumpedStorageGeneration}
+ + {@SolarGeneration} 
+ + {@WindGeneration} 
+ + {@OtherRenewableGeneration} 
  + {@OtherEnergyGeneration} 
  - {@PumpingEnergy});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  

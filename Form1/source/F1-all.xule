@@ -404,3 +404,35 @@ Rule Id:{$rule_id}"
 
 severity error	
 rule-focus $fact1
+
+assert F1.all.18 satisfied 
+$rule_id = rule-name();
+
+$dimensions = set(ferc:AcceleratedAmortizationPropertyElectricOtherAxis, ferc:NameOfTransmissionSystemAxis, ferc:OtherDeferredCreditsAxis, ferc:CapitalStockAxis, ferc:OtherRegulatoryLiabilityAxis, ferc:AcceleratedAmortizationPropertyOtherAxis, ferc:LicensedProjectNumberAndPumpedStoragePlantNameAxis, ferc:AccumulatedDeferredIncomeTaxByElectricTypeAxis, ferc:AccumulatedDeferredIncomeTaxByGasTypeAxis, ferc:ReconciliationOfNetIncomeWithTaxableIncomeForFederalIncomeTaxesAxis, ferc:RetainedEarningsAdjustmentsAxis, ferc:DeductionsOnReturnNotChargedAgainstBookIncomeAxis, ferc:RetainedEarningsAxis, ferc:RetainedEarningsPreferredStockAxis, ferc:AcceleratedAmortizationPropertyGasOtherAxis, ferc:ResearchDevelopmentOrDemonstrationExpendituresAxis, ferc:OfficerAxis, ferc:MiscellaneousDeferredDebitsAxis, ferc:RetainedEarningsUnappropriatedUndistributedSubsidiaryEarningsAxis, ferc:RetainedEarningsCommonStockAxis, ferc:ReductionInParOrStatedValueOfCapitalStockAxis, ferc:PurchasedPowerAxis, ferc:TransmissionOfElectricityByOthersAxis, ferc:RegulatoryCommissionExpensesAxis, ferc:MiscellaneousPaidInCapitalAxis, ferc:OtherPaidInCapitalAxis, ferc:MiscellaneousGeneralExpensesAxis, ferc:AppropriatedRetainedEarningsAxis, ferc:OtherRetirementsOfBalancesImpactingCashFlowsFromFinancingActivitiesAxis, ferc:RateScheduleAxis, ferc:TransmissionLinesAddedAxis, ferc:GainOnResaleOrCancellationOfReacquiredCapitalStockAxis, ferc:UnrecoveredPlantAndRegulatoryStudyCostsAxis, ferc:ScheduleRemarksAxis, ferc:TransmissionOfElectricityForOthersAxis, ferc:FormulaRateVariancesAxis, ferc:TransmissionOfElectricityByIsosOrRtosAxis, ferc:OtherLongTermDebtAxis, ferc:SubstationsAxis, ferc:DonationsReceivedFromStockholdersAxis, ferc:TransmissionServiceAndGenerationInterconnectionStudyCostsAxis, ferc:NonPowerGoodsOrServicesProvidedByAffiliatedCompanyAxis, ferc:ElectricPropertyLeasedToOthersAxis, ferc:EstimatedDepreciationChargesFactorsAxis, ferc:TariffProceedingAxis, ferc:OtherAdjustmentsToCashFlowsFromInvestmentActivitiesAxis, ferc:ClassOrSeriesOfObligationAndNameOfStockExchangeAxis, ferc:NonPowerGoodsOrServicesProvidedForAffiliatedCompanyAxis, ferc:ConstructionWorkInProgressAxis, ferc:FuelKindAxis, ferc:TransmissionLineStatisticsAxis, ferc:OtherAdjustmentsByOutsideSourcesToCashFlowsFromFinancingActivitiesAxis, ferc:DistributionOfSalariesAndWagesOtherAccountsAxis, ferc:NoncashAdjustmentsToCashFlowsFromOperatingActivitiesAxis, ferc:PreferredStockAxis, ferc:OtherAdjustmentsToCashFlowsFromFinancingActivitiesAxis, ferc:EnergyStorageOperationsAxis, ferc:TaxesAccruedPrepaidAndChargedAxis, ferc:DirectorAxis, ferc:OtherDebitOrCreditItemsAxis, ferc:CapitalStockByTypesAxis, ferc:OtherConstructionAndAcquisitionOfPlantInvestmentActivitiesAxis, ferc:MaterialsAndSuppliesOtherClassesAxis, ferc:ProvisionForRateRefundsAxis, ferc:ResidentialSalesAxis, ferc:CorporationsControlledByRespondentAxis, ferc:ReAcquiredBondObligationsAxis, ferc:PlantNameAxis, ferc:AdvancesFromAssociatedCompaniesAxis, ferc:SalesToRailroadsAndRailwaysAxis, ferc:InterdepartmentalSalesAxis, ferc:LicensedProjectNumberAndHydroelectricPlantNameAxis, ferc:NonUtilityDetailsAxis, ferc:ExtraordinaryPropertyLossesAxis, ferc:PublicStreetAndHighwayLightingAxis, ferc:SubsidiaryCompanyAxis, ferc:OtherClearingAccountsAxis, ferc:BondObligationsAxis, ferc:SalesForResaleAxis, ferc:OtherMiscellaneousOperatingRevenuesAxis, ferc:IndustrialSalesAxis, ferc:AmountsIncludedInIsoOrRtoSettlementStatementsAxis, ferc:OtherAdjustmentsToCashFlowsFromOperatingActivitiesAxis, ferc:ElectricPlantHeldForFutureUseAxis, ferc:DeductionsRecordedOnBooksNotDeductedForReturnAxis, ferc:GeneratingPlantStatisticsAxis, ferc:IncomeRecordedOnBooksNotIncludedInReturnAxis, ferc:CommercialSalesAxis, ferc:AllowancesRelinquishedAxis, ferc:CommonStockAxis, ferc:AllowancesInventoryAxis, ferc:OtherRegulatoryAssetsAxis, ferc:TaxableIncomeNotReportedOnBooksAxis, ferc:AccumulatedDeferredInvestmentTaxCreditsAccountSubdivisionsAxis, ferc:OtherSalesToPublicAuthoritiesAxis, ferc:AccumulatedDeferredIncomeTaxByOtherUtilityTypeAxis, ferc:RegionalTransmissionServiceRevenuesAxis, ferc:AllowancesCostOfSalesAxis, ferc:SalesOfElectricityByRateSchedulesAxis)
+
+$charLength = 250
+
+for $dim in $dimensions
+    $value = list({covered @concept = *  @$dim = *  where $fact.dimensions-typed.values.length > 0})
+    $set_with_lists_of_members = $value.dimensions-typed.values.to-set
+    $list_of_typed_members = sum($set_with_lists_of_members)
+    if $list_of_typed_members == none
+        skip
+    else 
+        $LongValues = (filter $list_of_typed_members where $item.string.length > $charLength returns $item)
+
+        if $LongValues == list()
+            skip
+        else
+            true
+
+message
+"The length of the typed dimension members {$LongValues.join(" | ")} is longer than {$charLength} characters on the typed dimension {$dim}. Typed dimension members should be a standard identifier that is consistent from year to year and should not be auto generated based on data in the filing.  Please rename the typed dimension identifier to a consistent unchanging identifier with a length that is no longer than {$charLength} characters.
+
+Typed Dimension : {$dim}
+Members : {$LongValues.join(" | ")}
+
+Rule Id:{$rule_id}"
+
+severity error  
+rule-focus taxonomy().concept($dim)

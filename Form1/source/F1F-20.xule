@@ -456,9 +456,13 @@ else
  $addend = ({@IntangiblePlantAdditions} 
  + {@SteamProductionPlantAdditions}
  + {@HydraulicProductionPlantAdditions}
++ {@SolarProductionPlantAdditions}
++ {@WindProductionPlantAdditions}
++ {@OtherRenewableProductionPlantAdditions}
  + {@OtherProductionPlantAdditions}
  + {@TransmissionPlantAdditions}
  + {@DistributionPlantAdditions}
+  + {@EnergyStoragePlantAdditions}
  + {@GeneralPlantAdditions});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -483,6 +487,12 @@ else
  + {@SteamProductionPlantRetirements}
  + {@HydraulicProductionPlantRetirements}
  + {@OtherProductionPlantRetirements}
+
++ {@SolarProductionPlantRetirements}
++ {@WindProductionPlantRetirements}
++ {@OtherRenewableProductionPlantRetirements}
+
++ {@EnergyStoragePlantRetirements}
  + {@TransmissionPlantRetirements}
  + {@DistributionPlantRetirements}
  + {@GeneralPlantRetirements});
@@ -509,8 +519,14 @@ else
  + {@SteamProductionPlantTransfersAndAdjustments} 
  + {@HydraulicProductionPlantTransfersAndAdjustments} 
  + {@OtherProductionPlantTransfersAndAdjustments} 
+ + {@SolarProductionPlantTransfersAndAdjustments} 
+ + {@WindProductionPlantTransfersAndAdjustments} 
+ + {@OtherRenewableProductionPlantTransfersAndAdjustments} 
+
+
  + {@TransmissionPlantTransfersAndAdjustments} 
  + {@DistributionPlantTransfersAndAdjustments}
+ + {@EnergyStoragePlantTransfersAndAdjustments}
  + {@GeneralPlantTransfersAndAdjustments});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -535,8 +551,12 @@ else
  + {@SteamProductionPlant}
  + {@HydraulicProductionPlant}
  + {@OtherProductionPlant}
+  + {@SolarProductionPlant}
+ + {@WindProductionPlant}
+  + {@OtherRenewableProductionPlant}
  + {@TransmissionPlant}
  + {@DistributionPlant}
+ + {@EnergyStoragePlant}
  + {@GeneralPlant});
 tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
 message 
@@ -755,5 +775,102 @@ Total Value : {$sum1}
 
 Rule Id:{$rule_id}
 "
+severity error
+rule-focus $sum1
+
+
+assert F1F.20.32 satisfied 
+$rule_id = rule-name();
+
+if set('1','1/3-Q').contains([covered @concept.local-name ='FormType']) or first(list([covered @ferc:UtilityPlantDataMajorNonmajor]))  == "Major"
+        skip
+else
+ $sum1 = {@SolarProductionPlant @period=$currentInstant};
+ $addend = ({@SolarProductionPlant @period=$priorInstant} 
+ + {@SolarProductionPlantAdditions @period=$currentDuration} 
+ - {@SolarProductionPlantRetirements @period=$currentDuration} 
+ + {@SolarProductionPlantTransfersAndAdjustments @period=$currentDuration});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for SolarProductionPlant with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+
+assert F1F.20.33 satisfied 
+$rule_id = rule-name();
+
+if set('1','1/3-Q').contains([covered @concept.local-name ='FormType']) or first(list([covered @ferc:UtilityPlantDataMajorNonmajor]))  == "Major"
+        skip
+else
+ $sum1 = {@WindProductionPlant @period=$currentInstant};
+ $addend = ({@WindProductionPlant @period=$priorInstant} 
+ + {@WindProductionPlantAdditions @period=$currentDuration} 
+ - {@WindProductionPlantRetirements @period=$currentDuration} 
+ + {@WindProductionPlantTransfersAndAdjustments @period=$currentDuration});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for WindProductionPlant with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1F.20.34 satisfied 
+$rule_id = rule-name();
+
+if set('1','1/3-Q').contains([covered @concept.local-name ='FormType']) or first(list([covered @ferc:UtilityPlantDataMajorNonmajor]))  == "Major"
+        skip
+else
+ $sum1 = {@OtherRenewableProductionPlant @period=$currentInstant};
+ $addend = ({@OtherRenewableProductionPlant @period=$priorInstant} 
+ + {@OtherRenewableProductionPlantAdditions @period=$currentDuration} 
+ - {@OtherRenewableProductionPlantRetirements @period=$currentDuration} 
+ + {@OtherRenewableProductionPlantTransfersAndAdjustments @period=$currentDuration});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for OtherRenewableProductionPlant with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
+severity error
+rule-focus $sum1
+
+
+assert F1F.20.35 satisfied 
+$rule_id = rule-name();
+
+if set('1','1/3-Q').contains([covered @concept.local-name ='FormType']) or first(list([covered @ferc:UtilityPlantDataMajorNonmajor]))  == "Major"
+        skip
+else
+ $sum1 = {@EnergyStoragePlant @period=$currentInstant};
+ $addend = ({@EnergyStoragePlant @period=$priorInstant} 
+ + {@EnergyStoragePlantAdditions @period=$currentDuration} 
+ - {@EnergyStoragePlantRetirements @period=$currentDuration} 
+ + {@EnergyStoragePlantTransfersAndAdjustments @period=$currentDuration});
+tolerance_for_decimals($sum1,$addend,$tolerance_factor)  
+message 
+"The company has reported a value for EnergyStoragePlant with a value of {$sum1} that is not equal to the value of the sum of its components of {$addend}
+
+Total Element : {$sum1.concept.name}
+Total Period : {$sum1.period}
+Total Value : {$sum1} 
+
+Rule Id:{$rule_id}"
 severity error
 rule-focus $sum1
