@@ -740,18 +740,19 @@ else
         if $concept_item == none
                 skip
         else
+              
                 $data = navigate summation-item children from $concept_item role "http://ferc.gov/form/2020-01-01/roles/Schedule/F1/ScheduleElectricOperationAndMaintenanceExpenses" returns  (target-name, weight)
  
                 $addend = sum(list(for $x in $data
                                                 $targetElement = $x[1];
                                                 $targetWeight = $x[2];
-                                        [nonils @concept = $targetElement] * $targetWeight
+                                        [nonils @concept = $targetElement @period=$currentDuration] * $targetWeight
                                                 )
                                 )
  
                 $addend_string = sum(list(for $x in $data.sort
                                                 $targetElement = $x[1];
-                                                $factAmt = [nonils @concept = $targetElement].string;
+                                                $factAmt = [nonils @concept = $targetElement @period=$currentDuration].string;
                                                 $weight =  if $x[2] == 1
                                                                                 "+"
                                                                         else
@@ -765,7 +766,7 @@ else
                                                 )
                                 )
  
-                $sum2 = [@concept=$concept_item]
+                $sum2 = [@concept=$concept_item @period=$currentDuration]
  
                 $conceptReported = $concept_item;
                  tolerance_for_decimals($sum2,$addend,$tolerance_factor)
